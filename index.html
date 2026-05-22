@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools India - Best AI Tools Reviews in Hindi & English 2026</title>
+  <meta name="description" content="Desh ka sabse popular AI tools directory! Free AI tools reviews in Hindi & English. Find best AI tools India ke liye - tested, rated & beginner-friendly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER
+       ========================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AI<span class="logo-accent">Tools</span>India</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#categories" class="mobile-nav-link">Categories</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">🚀 India's #1 AI Directory</div>
+      <h1 class="hero-title">Best <span class="gradient-text">AI Tools</span> India Ke Liye</h1>
+      <p class="hero-subtitle">Honest reviews in Hindi & English, UPI payments support details, and pricing in INR (₹).</p>
+      
+      <!-- Search Box -->
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search AI tools (e.g. ChatGPT, coding, image)..." autocomplete="off" />
+        <button id="search-clear" class="search-clear" aria-label="Clear search">✕</button>
+      </div>
+      
+      <!-- Live Search Feedback (Fixed Search Visibility issue) -->
+      <div id="search-feedback" style="margin-top: -15px; margin-bottom: 25px; font-size: 0.95rem; color: var(--text-secondary); min-height: 22px; font-weight: 600; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+        Showing all 12 tools
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="total-tools-count">12</span>
+          <span class="stat-label">AI Tools Reviewed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Tested & Verified</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">INR</span>
+          <span class="stat-label">Pricing & UPI Info</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CATEGORY PILLS
+       ========================================== -->
+  <div class="categories-strip" id="categories">
+    <div class="container category-pills">
+      <button class="pill active" data-category="All">✨ All</button>
+      <button class="pill" data-category="Writing">✍️ Writing</button>
+      <button class="pill" data-category="Image Generation">🎨 Image</button>
+      <button class="pill" data-category="Coding">💻 Coding</button>
+      <button class="pill" data-category="Research">🔬 Research</button>
+      <button class="pill" data-category="Audio">🎙️ Audio</button>
+      <button class="pill" data-category="Productivity">📋 Productivity</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FILTER & SORT BAR
+       ========================================== -->
+  <section class="filter-bar-section">
+    <div class="container filter-bar">
+      <div class="results-count" id="results-count">Showing all 12 tools</div>
+      <div class="filter-right">
+        <div class="filter-group">
+          <span class="filter-label">Category:</span>
+          <select id="category-filter" class="filter-select">
+            <option value="All">All Categories</option>
+            <option value="Writing">Writing</option>
+            <option value="Image Generation">Image Generation</option>
+            <option value="Coding">Coding</option>
+            <option value="Research">Research</option>
+            <option value="Audio">Audio</option>
+            <option value="Productivity">Productivity</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Sort By:</span>
+          <select id="sort-filter" class="filter-select">
+            <option value="rating">Highest Rated</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+            <option value="price-free">Free First</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Pricing:</span>
+          <select id="price-filter" class="filter-select">
+            <option value="All">All Prices</option>
+            <option value="Free">Free Available</option>
+            <option value="Paid">Paid Only</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TOOLS GRID
+       ========================================== -->
+  <section class="tools-section">
+    <div class="container">
+      <div class="tools-grid" id="tools-grid">
+        <!-- Cards loaded dynamically via JavaScript -->
+      </div>
+      
+      <!-- No Results State -->
+      <div class="no-results hidden" id="no-results">
+        <div class="no-results-icon">🔍</div>
+        <h3>Koi tool nahi mila!</h3>
+        <p>Try different keywords ya filter change karke dekho.</p>
+        <button id="reset-filters" class="btn-reset">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ABOUT SECTION
+       ========================================== -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <div class="section-badge">About Us</div>
+        <h2 class="section-title">Hum Kaun Hain Aur Kya Karte Hain?</h2>
+        <p>AI Tools India desh ka sabse bade aur unbiased AI tools directory hai. Hum har tool ko manually test karte hain taaki aapko perfect aur reliable review mil sake.</p>
+        <p>Hamara goal hai har creator, developer aur student tak AI ki knowledge aur resources ko beginner-friendly language (Hindi + English mix) mein pahunchana.</p>
+        <div class="about-features">
+          <div class="about-feature"><span>✅</span> 100% Tested Reviews</div>
+          <div class="about-feature"><span>🇮🇳</span> India Specific Insights</div>
+          <div class="about-feature"><span>💳</span> INR Pricing Details</div>
+          <div class="about-feature"><span>🎙️</span> Voice & Image Tools</div>
+        </div>
+      </div>
+      <div class="about-card-visual">
+        <div class="visual-card">
+          <div class="vc-row"><span>🤖</span> <span>ChatGPT Review</span></div>
+          <div class="vc-row"><span>🎨</span> <span>Midjourney Review</span></div>
+          <div class="vc-row"><span>💻</span> <span>GitHub Copilot Review</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AI<span class="logo-accent">Tools</span>India</span>
+      </div>
+      <p class="footer-tagline">Making AI simple and accessible for India.</p>
+      
+      <div class="affiliate-disclosure">
+        <strong>Affiliate Disclosure:</strong> Hum is website pe affiliate links use karte hain. Agar aap un links se purchase karte hain toh hume bina kisi extra charge ke commission/support milta hai, jo hume unbiased reviews create karne mein help karta hai.
+      </div>
+      
+      <div class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#categories" class="footer-link">Categories</a>
+        <a href="#about" class="footer-link">About</a>
+      </div>
+      
+      <p class="footer-copy">&copy; 2026 AI Tools India. Made with 🤍 for Indian Creators. <br> Developed by Kinder Singh.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL OVERLAY (FULL REVIEW POPUP)
+       ========================================== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close review">✕</button>
+      <div class="modal-header">
+        <div class="modal-logo-wrap">
+          <span class="modal-emoji" id="modal-emoji">🤖</span>
+        </div>
+        <div>
+          <h3 class="modal-tool-name" id="modal-tool-name">ChatGPT</h3>
+          <span class="modal-category-badge" id="modal-category-badge">✍️ Writing</span>
+        </div>
+      </div>
+      <div class="modal-rating-bar">
+        <div class="modal-stars" id="modal-stars">
+          <!-- Star ratings -->
+        </div>
+        <span class="modal-rating-num" id="modal-rating-num">4.8 / 5</span>
+        <span class="modal-price-tag" id="modal-price-tag">💰 Free / ₹1,670/mo</span>
+      </div>
+      
+      <p class="modal-review-text" id="modal-review-text">
+        Full review text...
+      </p>
+      
+      <div class="modal-pros-cons">
+        <div class="pros-box">
+          <div class="pros-title">Pros</div>
+          <ul id="modal-pros-list">
+            <!-- Pros loaded dynamically -->
+          </ul>
+        </div>
+        <div class="cons-box">
+          <div class="cons-title">Cons</div>
+          <ul id="modal-cons-list">
+            <!-- Cons loaded dynamically -->
+          </ul>
+        </div>
+      </div>
+      
+      <div class="modal-india-section">
+        <h4>🇮🇳 India Ke Liye Kya Khaas?</h4>
+        <p id="modal-india-text">
+          India pricing details, UPI payment support info etc.
+        </p>
+      </div>
+      
+      <div class="modal-actions">
+        <a href="#" class="btn-affiliate" id="modal-affiliate-btn" target="_blank" rel="noopener noreferrer sponsored">🔗 Try Tool Now</a>
+        <button class="btn-close-modal" id="modal-close-btn">Close</button>
+      </div>
+      <p class="modal-disclosure">* Affiliate link hai - aapko extra cost nahi padti.</p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
